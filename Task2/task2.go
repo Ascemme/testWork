@@ -14,6 +14,7 @@ func main() {
 	fmt.Println(logic(M))
 }
 
+// looking for max value in array
 func maxValue(x []int) (i int) {
 	var maxV int
 	for _, value := range x {
@@ -25,6 +26,7 @@ func maxValue(x []int) (i int) {
 	return maxV
 }
 
+// here we cutting an array step by step and making a new one with result
 func logic(x []int) []int {
 	var newArray []int
 	var y []int

@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+//global values for me to see tham if all of functions and changing it if needs
 var fileText string
 var questions []string
 var sentence []string
@@ -22,6 +23,7 @@ func main() {
 	cratingFile()
 }
 
+//here we open a file in falder and saving the text in "fileXext" string
 func openTextFile() {
 	file, err := os.Open("text.txt")
 	if err != nil {
@@ -43,6 +45,7 @@ func openTextFile() {
 	fileText = string(bs)
 }
 
+//here we are cutting a string wich is given in senten, qustions and words
 func arrayMaker(s string) {
 	var r = regexp.MustCompile("[.?!]")
 	var rWords = regexp.MustCompile("[.?!, ]")
@@ -55,6 +58,7 @@ func arrayMaker(s string) {
 	}
 }
 
+//making a new array of main atribute
 func sentensMaker(text []string, simbol []string) {
 
 	for i := 0; i < len(simbol); i++ {
@@ -70,6 +74,7 @@ func sentensMaker(text []string, simbol []string) {
 	}
 }
 
+// creating a file with and writing here an array of things
 func cratingFile() {
 	file, err := os.Create("newFile.txt")
 	if err != nil {
@@ -109,6 +114,9 @@ func cratingFile() {
 		file.WriteString("\n")
 	}
 }
+
+//a logic of task3 which is given
+
 func replacingWords() {
 
 	var rege = regexp.MustCompile("[ !?.]")
