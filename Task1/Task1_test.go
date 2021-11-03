@@ -12,6 +12,6 @@ func TestUsersInput(t *testing.T) {
 	//assert
 
 	if result != expection {
-		t.Errorf("eeeeee")
+		t.Errorf(" error Expected = %v result is = %v", expection, result)
 	}
 }
