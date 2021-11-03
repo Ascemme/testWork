@@ -57,7 +57,7 @@ func (usrAuth UsersAuth) logic(ArrayOfValues UsersAuth) {
 	for i, value := range ArrayOfValues {
 		outString := fmt.Sprintf("<%[1]d> value: %[2]v", i, value)
 		fmt.Println(outString)
-		
+
 	}
 
 }
